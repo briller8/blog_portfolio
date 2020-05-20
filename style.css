@@ -6,7 +6,7 @@
 --color-dark-white: #dbdbdb;
 --color-grey: #616161;
 --color-light-grey: #7c7979;
---color-dark-gray: #4d4d4d;
+--color-dark-grey: #4d4d4d;
 --color-dark-black: #222222;
 --color-purple: #7c2ae8;
 --color-dark-purple: #5e17eb;
@@ -16,6 +16,7 @@
 --color-blue:#00c4cc;
 --color-light-blue: #6fd6ff;
 --color-light-green:#bff0cf;
+--color-bright-green:#f3f6d4;
 
 /* Font Size */
 --font-large: 48px;
@@ -156,7 +157,10 @@ p{
     padding: 50px;
     text-align: center;
     margin: auto;
+}
+.section__container{
     max-width: 1200px;
+    margin: auto;
 }
 
 /* About Major */
@@ -199,5 +203,58 @@ p{
     text-align: left;
 }
 .job__name, .job__period{
-    font-size: var(--font-small);
+    font-size: var(--font-micro);
+}
+
+/* Skill */
+#skills{
+    background-color: var(--color-bright-green); 
+    margin: 16px;
+}
+
+.skillset{
+    display: flex;
+    background-color: var(--color-light-grey);
+    color: var(--color-white);
+    margin : 20px 40px;
+}
+
+.skillset__title{
+    color: var(--color-white);
+}
+
+.skillset__left{
+    flex-basis: 60%;
+    background-color: var(--color-dark-grey);
+    padding: 20px;
+}
+
+.skill{
+    margin-bottom: 8px;
+}
+.skills__discription{
+    display: flex;
+    justify-content: space-between;;
+}
+
+.skill__bar{
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey);
+}
+
+.skill__value{
+    height: 3px;
+    background-color: orange;
+}
+
+.skillset__right{
+    flex-basis: 40%;
+}
+.tools{
+    background-color: var(--color-grey);
+}
+
+.tools, .etc{
+    padding: 20px;
 }
