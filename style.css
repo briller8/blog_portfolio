@@ -94,26 +94,34 @@ p{
 
 /* Navbar */
 #navbar{
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-dark-purple);
+    background-color: transparent;
     align-items: center;
     color: var(--color-white);
-    padding: 16px;
+    padding: 3px;
+}
+
+#navbar.navbar--dark{
+    background-color: var(--color-dark-purple);
+    padding: 3px;
 }
 
 .navbar__menu{
     display: flex;
 }
 
-.navbar__logo{
+.navbar__logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
 }
 
 .navbar__menu__item{
-    padding: 8px 12px;
-    margin: 0 4px;
+    font-size:  var(--font-regular);
+    padding: 6px 12px;
+    margin: 0 3px;
     border-radius: var(--size-border-radius);
     cursor: pointer;
 }
@@ -132,6 +140,7 @@ p{
 #Home{
     background: url('imgs/green.png') center/cover no-repeat ;
     padding: 40px;
+    padding-top: 150px;
     text-align: center;
 }
 .home__avatar{
