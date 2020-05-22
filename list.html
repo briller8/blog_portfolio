@@ -17,7 +17,54 @@
 </head>
 
 <body>
-
+    <!-- NavBar -->
+    <nav id="navbar">
+        <div class="navbar__logo">
+            <a href="#">
+                <img src="imgs/blog_logo.png" alt="로고" class="navbar__logo">
+            </a>
+        </div>
+        <div class="navbar__menul">
+            <ul class="navbar__menu">
+                <li data-link="#home" class="navbar__menu__item active">Home</li>
+                <li data-link="#about" class="navbar__menu__item">Front-end</li>
+                <li data-link="#skills" class="navbar__menu__item">Back-end</li>
+                <li data-link="#work" class="navbar__menu__item">Marketing</li>
+                <li data-link="#contact" class="navbar__menu__item">About Me</li>
+            </ul>
+        </div>
+        <button id="writeBtn" class="navbar__write-btn">Write</button>
+        <!-- Toggle button -->
+        <button id="toggleBtn" class="navbar__toggle-btn">
+            <i class="fas fa-hamburger"></i>
+        </button>
+    </nav>
+    <main>
+        <section id="main" class="list">
+            <div class="list__container">
+                <div class="list__categories">
+                    <button data-filter="*" class="category__btn selected">
+                        All<span class="category__count">{{count}}</span>
+                    </button>
+                    <button data-filter="Front" class="category__btn">
+                        Front-end<span class="category__count">{{count}}</span>
+                    </button>
+                    <button data-filter="Back" class="category__btn">
+                        Back-end<span class="category__count">{{count}}</span>
+                    </button>
+                    <button data-filter="Marketing" class="category__btn">
+                        Marketing<span class="category__count">{{count}}</span>
+                    </button>
+                    <button data-filter="Thought" class="category__btn">
+                        Thought<span class="category__count">{{count}}</span>
+                    </button>
+                </div>
+                <div class="list__contents">
+                    <!-- 이미지 / 제목 / 카테고리 -->
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

@@ -21,21 +21,20 @@
     <!-- NavBar -->
     <nav id="navbar">
         <div class="navbar__logo">
-            <i class="fab fa-diaspora"></i>
-            <a href="#">Chloe</a>
+            <a href="#">
+                <img src="imgs/blog_logo.png" alt="로고" class="navbar__logo">
+            </a>
         </div>
         <div class="navbar__menul">
             <ul class="navbar__menu">
                 <li data-link="#home" class="navbar__menu__item active">Home</li>
-                <li data-link="#about" class="navbar__menu__item">About</li>
-                <li data-link="#skills" class="navbar__menu__item">Skills</li>
-                <li data-link="#work" class="navbar__menu__item">My work</li>
-                <li data-link="#testimpnials" class="navbar__menu__item">
-                    Testimonial
-                </li>
-                <li data-link="#contact" class="navbar__menu__item">Contact</li>
+                <li data-link="#about" class="navbar__menu__item">Front-end</li>
+                <li data-link="#skills" class="navbar__menu__item">Back-end</li>
+                <li data-link="#work" class="navbar__menu__item">Marketing</li>
+                <li data-link="#contact" class="navbar__menu__item">About Me</li>
             </ul>
         </div>
+        <button id="writeBtn" class="navbar__write-btn">Write</button>
         <!-- Toggle button -->
         <button id="toggleBtn" class="navbar__toggle-btn">
             <i class="fas fa-hamburger"></i>
@@ -58,6 +57,12 @@
                 <label>내용 :<br />
                     <textarea v-model="content" name="" id="" rows="10" class="blog__content--textarea"></textarea>
                 </label>
+                <select name="tag">
+                    <option value="front">Front-end</option>
+                    <option value="back">Back-end</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="thought">Thought</option>
+                </select>
                 <label>작성자 :<br />
                     <input v-model="author" type="text" class="blog__author--input" maxlength="5"
                         autocomplete /></label>
