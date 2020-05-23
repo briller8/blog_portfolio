@@ -45,6 +45,7 @@
     box-sizing: border-box;
 }
 
+
 body{
     font-family: 'Noto Sans KR', sans-serif;
     margin: 0;
@@ -54,7 +55,7 @@ body{
 
 a{
     text-decoration: none;
-    color: var(--color-white);
+    color: var(--color-dark-black);
 }
 ul{
     list-style: none;
@@ -124,28 +125,49 @@ p{
     font-weight: var(--weight-semi-bold);
 }
 
+.navbar__menu__item> a{
+    color: var(--color-dark-purple);
+}
+
 .navbar__menu__item{
     font-size:  var(--font-regular);
+    position: relative;
     padding: 6px 12px;
     margin: 0 3px;
     border-radius: var(--size-border-radius);
     cursor: pointer;
 }
 
-.navbar__menu__item.active{
-    border : 1px solid var(--color-white);
-    border-radius: var(--size-border-radius);
-    
+.navbar__menu__item::after{
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '';
+  color: transparent;
+  height: 3px;
 }
-.navbar__menu__item:hover{
-    background-color: var(--color-light-white);
+
+.navbar__menu__item.active::after{
+    width: 100%;
+    background-color: var(--color-dark-purple);
+    color: var(--color-dark-purple);
+    font-weight: var(--font-large);
+}
+.navbar__menu__item:hover::after{
+    width: 100%;
+    transition: all var(--Animation-duration) ease;
+    transform: scale(1.1);    
+    background-color: var(--color-dark-purple);
     color: var(--color-dark-purple);
     font-weight: var(--font-large);
 }
 
 /* Home */
 #Home{
-    background: url('imgs/green.png') center/cover no-repeat ;
+    background: url('/public/imgs/green.png') center/cover no-repeat ;
     padding: 40px;
     padding-top: 150px;
     text-align: center;
@@ -456,38 +478,4 @@ p{
 .contact__links i:hover{
     transform: scale(1.1);
     transition: all var(--Animation-duration) ease-in;
-}
-
-/* Header */
-#Header{
-    background-color: var(--color-white);
-    /* background: url('imgs/green.png') center/cover no-repeat ; */
-    height: 240px;
-    padding: 40px;
-    padding-top: 80px;
-    text-align: center;
-}
-.blog__navbar__logo{
-    display: block;
-}
-.navbar__logo img{
-    width: 139px;
-    justify-content: center;
-    align-content: center;
-}
-
-.header__title{
-    color: var(--color-white);
-}
-
-#writeBtn{
-    background-color: var(--color-orange);
-    color: var(--color-light-white);
-    padding: 5px 8px;
-    font-size: var(--font-regular);
-    border-radius: var(--size-border-radius);
-}
-
-#writeBtn:hover{
-    transform: scale(1.1);
 }

@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MVlog</title>
+    <title>SH_Portfolio_Blog</title>
     <meta name="description" content="Portfolio for world-renowned sorfware engineer Seohyeon" />
     <meta name="author" content="Seohyeon Kim">
-    <link rel="icon" type="img/png" href="imgs/favicon.png">
+    <link rel="icon" type="img/png" href="public/imgs/favicon.png">
     <script src="https://kit.fontawesome.com/4b6867fcba.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="public/css/blog.css">
+    <script src="blog.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <!-- font-family: 'Noto Sans KR', sans-serif; -->
     </script>
@@ -21,7 +21,7 @@
     <nav id="navbar">
         <div class="navbar__logo">
             <a href="#">
-                <img src="imgs/blog_logo.png" alt="로고" class="navbar__logo">
+                <img src="public/imgs/blog_logo.png" alt="로고" class="navbar__logo">
             </a>
         </div>
         <div class="navbar__menul">
@@ -33,7 +33,9 @@
                 <li data-link="#contact" class="navbar__menu__item">About Me</li>
             </ul>
         </div>
-        <button id="writeBtn" class="navbar__write-btn">Write</button>
+        <a href="write.html">
+            <button id="writeBtn" class="navbar__write-btn">Write</button>
+        </a>
         <!-- Toggle button -->
         <button id="toggleBtn" class="navbar__toggle-btn">
             <i class="fas fa-hamburger"></i>
@@ -61,6 +63,7 @@
                 </div>
                 <div class="list__contents">
                     <!-- 이미지 / 제목 / 카테고리 -->
+
                 </div>
             </div>
         </section>

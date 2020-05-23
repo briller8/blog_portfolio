@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MVlog:write</title>
+    <title>SH_Portfolio_Blog</title>
     <meta name="description" content="Portfolio for world-renowned sorfware engineer Seohyeon" />
     <meta name="author" content="Seohyeon Kim">
-    <link rel="icon" type="img/png" href="imgs/favicon.png">
+    <link rel="icon" type="img/png" href="public/imgs/favicon.png">
     <script src="https://kit.fontawesome.com/4b6867fcba.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="public/css/write.css">
+    <script src="write.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <!-- font-family: 'Noto Sans KR', sans-serif; -->
     </script>
@@ -22,7 +22,7 @@
     <nav id="navbar">
         <div class="navbar__logo">
             <a href="#">
-                <img src="imgs/blog_logo.png" alt="로고" class="navbar__logo">
+                <img src="public/imgs/blog_logo.png" alt="로고" class="navbar__logo">
             </a>
         </div>
         <div class="navbar__menul">
@@ -43,9 +43,9 @@
     <!-- Header -->
     <section id="Header">
         <div class="header__container">
-            <h1 class="header__title">
+            <!-- <h1 class="header__title">
                 write<br />
-            </h1>
+            </h1> -->
         </div>
     </section>
     <!-- Write -->
@@ -55,8 +55,13 @@
                 <label>제목 :<br />
                     <input v-model="title" type="text" class="blog__title--input" maxlength="10" autocomplete /></label>
                 <label>내용 :<br />
-                    <textarea v-model="content" name="" id="" rows="10" class="blog__content--textarea"></textarea>
+                    <textarea v-model="content" rows="10" class="blog__content--textarea"></textarea>
                 </label>
+                <ul id="add__btn">
+                    <li><button class="add__plus-btn"><i class="far fa-times-circle"></i></button></li>
+                    <li><button class="add__img-btn"><i class="far fa-image"></i></li>
+                    <li><button class="add__code-btn"><i class="fas fa-code"></i></button></li>
+                </ul>
                 <select name="tag">
                     <option value="front">Front-end</option>
                     <option value="back">Back-end</option>
@@ -70,7 +75,7 @@
                     비밀번호 :<br />
                     <input v-model="password" type="password" class="blog__author--input" maxlength="5"
                         autocomplete /></label>
-                <button type="submit" class="blog__btn">
+                <button type="submit" class="blog__btn active">
                     등록
                 </button>
             </form>
