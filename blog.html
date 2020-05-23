@@ -10,7 +10,7 @@
     <link rel="icon" type="img/png" href="public/imgs/favicon.png">
     <script src="https://kit.fontawesome.com/4b6867fcba.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/blog.css">
-    <script src="blog.js" defer></script>
+    <script src="public/js/blog.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <!-- font-family: 'Noto Sans KR', sans-serif; -->
     </script>
@@ -19,48 +19,82 @@
 <body>
     <!-- NavBar -->
     <nav id="navbar">
-        <div class="navbar__logo">
-            <a href="#">
-                <img src="public/imgs/blog_logo.png" alt="로고" class="navbar__logo">
-            </a>
-        </div>
-        <div class="navbar__menul">
-            <ul class="navbar__menu">
-                <li data-link="#home" class="navbar__menu__item active">Home</li>
-                <li data-link="#about" class="navbar__menu__item">Front-end</li>
-                <li data-link="#skills" class="navbar__menu__item">Back-end</li>
-                <li data-link="#work" class="navbar__menu__item">Marketing</li>
-                <li data-link="#contact" class="navbar__menu__item">About Me</li>
-            </ul>
-        </div>
-        <a href="write.html">
-            <button id="writeBtn" class="navbar__write-btn">Write</button>
-        </a>
-        <!-- Toggle button -->
+        <div class="navbar__container">
+            <div class="navbar__menu">
+                <a href="/">
+                    <img src="public/imgs/blog_logo.png" alt="로고" class="navbar__logo">
+                </a>
+            </div>
+            <div class="navbar__menu">
+                <ul class="navbar__menu--list">
+                    <li data-link="#goToBlog" class="navbar__menu__item active"> <a href="blog.html">Blog</a></li>
+                    <li>
+                        <a href="write.html">
+                            <button id="writeBtn" class="navbar__write-btn">Write</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Toggle button
         <button id="toggleBtn" class="navbar__toggle-btn">
             <i class="fas fa-hamburger"></i>
-        </button>
+        </button> -->
+        </div>
     </nav>
-    <main>
-        <section id="main" class="list">
+    <main id="main">
+        <section id="content">
+            <div class="content__container">
+                <ul>
+                    <li>
+                        <div class="card">
+                            <img src="/public/imgs/green.png" alt="그린" class="card__img">
+                            <div class="card__content">
+                                <div class="card__text__title">제목</div>
+                                <div class="card__text__content">내용약간</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <img src="/public/imgs/green.png" alt="그린" class="card__img">
+                            <div class="card__content">
+                                <div class="card__text__title">제목</div>
+                                <div class="card__text__content">내용약간</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <img src="/public/imgs/green.png" alt="그린" class="card__img">
+                            <div class="card__content">
+                                <div class="card__text__title">제목</div>
+                                <div class="card__text__content">내용약간</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card">
+                            <img src="/public/imgs/green.png" alt="그린" class="card__img">
+                            <div class="card__content">
+                                <div class="card__text__title">제목</div>
+                                <div class="card__text__content">내용약간</div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <section id="list" class="list">
             <div class="list__container">
-                <div class="list__categories">
-                    <button data-filter="*" class="category__btn selected">
-                        All<span class="category__count">{{count}}</span>
-                    </button>
-                    <button data-filter="Front" class="category__btn">
-                        Front-end<span class="category__count">{{count}}</span>
-                    </button>
-                    <button data-filter="Back" class="category__btn">
-                        Back-end<span class="category__count">{{count}}</span>
-                    </button>
-                    <button data-filter="Marketing" class="category__btn">
-                        Marketing<span class="category__count">{{count}}</span>
-                    </button>
-                    <button data-filter="Thought" class="category__btn">
-                        Thought<span class="category__count">{{count}}</span>
-                    </button>
-                </div>
+                <label><span>CONTENTS</span></label>
+                <ul class="list__categories">
+                    <li data-filter="*" class="category__item active">All</li>
+                    <li data-filter="Front" class="category__item">Front-end</li>
+                    <li data-filter="Back" class="category__item">Back-end</li>
+                    <li data-filter="Marketing" class="category__item">Marketing</li>
+                    <li data-filter="Thought" class="category__item">Thought</li>
+                </ul>
                 <div class="list__contents">
                     <!-- 이미지 / 제목 / 카테고리 -->
 

@@ -10,7 +10,7 @@
     <link rel="icon" type="img/png" href="public/imgs/favicon.png">
     <script src="https://kit.fontawesome.com/4b6867fcba.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/write.css">
-    <script src="write.js" defer></script>
+    <script src="/public/js/write.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <!-- font-family: 'Noto Sans KR', sans-serif; -->
     </script>
@@ -20,25 +20,27 @@
 <body>
     <!-- NavBar -->
     <nav id="navbar">
-        <div class="navbar__logo">
-            <a href="#">
-                <img src="public/imgs/blog_logo.png" alt="로고" class="navbar__logo">
-            </a>
-        </div>
-        <div class="navbar__menul">
-            <ul class="navbar__menu">
-                <li data-link="#home" class="navbar__menu__item active">Home</li>
-                <li data-link="#about" class="navbar__menu__item">Front-end</li>
-                <li data-link="#skills" class="navbar__menu__item">Back-end</li>
-                <li data-link="#work" class="navbar__menu__item">Marketing</li>
-                <li data-link="#contact" class="navbar__menu__item">About Me</li>
-            </ul>
-        </div>
-        <button id="writeBtn" class="navbar__write-btn">Write</button>
-        <!-- Toggle button -->
+        <div class="navbar__container">
+            <div class="navbar__menu">
+                <a href="/">
+                    <img src="public/imgs/blog_logo.png" alt="로고" class="navbar__logo">
+                </a>
+            </div>
+            <div class="navbar__menu">
+                <ul class="navbar__menu--list">
+                    <li data-link="#goToBlog" class="navbar__menu__item active"> <a href="blog.html">Blog</a></li>
+                    <li>
+                        <a href="write.html">
+                            <button id="writeBtn" class="navbar__write-btn">Write</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Toggle button
         <button id="toggleBtn" class="navbar__toggle-btn">
             <i class="fas fa-hamburger"></i>
-        </button>
+        </button> -->
+        </div>
     </nav>
     <!-- Header -->
     <section id="Header">
