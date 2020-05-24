@@ -127,7 +127,7 @@
             console.log(result);
             if (result.status === "success") {
                 alert("삭제되었습니다");
-                window.location = "/blog.html"
+                window.location = "blog.html"
             } else {
                 alert("패드워드를 확인해주세요");
             }
