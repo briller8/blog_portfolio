@@ -9,7 +9,7 @@
 
     const detail = document.querySelector("#detail");
     const cardList = document.querySelector("#cardList");
-
+    const categoryList = document.querySelector("#categoryList");
 
 
     window.addEventListener("load", async () => {
@@ -45,21 +45,57 @@
         })
     }
 
+    if (categoryList) {
+        categoryList.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const category = e.target.dataset.filter;
+            // console.dir(categoryList);
+            Array.from(categoryList.children).forEach(li => {
+                li.classList.remove("active");
+                // console.log(li);
+            })
+
+            Array.from(cardList.children).forEach(card => {
+                // console.dir(card.dataset.tag);
+                if (category) {
+                    if (category === "All") {
+                        card.classList.remove("remove");
+                        e.target.classList.add("active");
+                    } else {
+                        if (category.toLowerCase() !== card.dataset.tag) {
+                            card.classList.add("remove");
+                            e.target.classList.add("active");
+                        } else {
+                            card.classList.remove("remove");
+                            e.target.classList.add("active");
+                        }
+                    }
+                }
+            });
+
+
+        })
+    }
+
+
 
     ////////////////////
     // event handler  //
     ////////////////////
+
+
     const onSetCardInfo = async ({ cardId }) => {
         const result = await getBlog({ id: cardId });
         if (result.status === "success") {
-
-            const { author, title, content, id } = result.data
+            console.log(result.data)
+            const { author, title, content, id, tag } = result.data
 
             const cardInfo = {
                 id,
                 author,
                 title,
-                content
+                content,
+                tag
             }
             detail.style.display = 'flex'
             detail.innerHTML = makeModal({ cardInfo })
@@ -68,14 +104,29 @@
 
 
 
+
     ////////////////////
     //     custom     //
     ////////////////////
-    const makeCard = ({ img, title, content, id }) => {
+    const makeCard = ({ img, title, content, id, tag }) => {
+
+        let imagePath = ""
+        if (tag === "front") {
+            imagePath = "public/imgs/js.png"
+        } else if (tag == "back") {
+            imagePath = "public/imgs/java.png"
+        } else if (tag == "marketing") {
+            imagePath = "public/imgs/mkt.png"
+        } else if (tag == "thought") {
+            imagePath = "public/imgs/th.png"
+        }
+
+
+
         return `
-        <li >
+        <li data-tag="${tag}">
             <div class="card" >
-                <img src="public/imgs/green.png" alt="그린" class="card__img">
+                <img src="${imagePath}" alt="${imagePath}" class="card__img">
                 <div class="card__content">
                     <div class="card__text__title">${title}</div>
                     <div class="card__text__content">${content}</div>

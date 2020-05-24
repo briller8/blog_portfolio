@@ -303,6 +303,7 @@ p{
 
 .card__content{
     padding: 12px 12px 20px;
+   
 }
 .card__img{    
     width: 100%;
@@ -315,16 +316,27 @@ p{
     font-size: large;
     font-weight: bold;
     margin: 11px 0px 10px;
+    height: 28px;
+    overflow: hidden ;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .card__text__content{
     color: var(--color-light-grey);
+    margin: 11px 0px 10px;
     overflow: hidden;
     height: 30px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .card:hover{
     transition: all var(--Animation-duration) ease;
     transform: scale(1.02) ;
+}
+
+.remove{
+    display: none;
 }
 
 /* Detail modal */
