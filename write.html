@@ -17,6 +17,7 @@
 </head>
 
 
+
 <body>
     <!-- NavBar -->
     <nav id="navbar">
@@ -43,29 +44,25 @@
         </button> -->
         </div>
     </nav>
-    <!-- Header
-    <section id="Header">
-        <div class="header__container">
-        </div>
-    </section> -->
     <!-- Write -->
     <main id="main">
         <section id="blog">
-            <form id="blogForm" v-on:submit.prevent="onSubmit">
+            <form id="blogForm">
                 <!-- addBtn -->
+                <input type="file" hidden id="file" />
                 <ul id="add__btn" contentEditable="fasle">
                     <li><button class="add__plus-btn"><i class="far fa-times-circle"></i></button>
                         <ul>
-                            <li><button class="add__img-btn"><i class="far fa-image"></i></li>
+                            <li><button class="add__img-btn" id="fileBtn"><i class="far fa-image"></i></li>
                             <li><button class="add__code-btn"><i class="fas fa-code"></i></button></li>
                         </ul>
                     </li>
                 </ul>
                 <div class="blogtext" contentEditable="true">
-                    <h3 class="write__title">
+                    <h3 class="write__title" id="blogTitle">
                         <span class="defaultText">Title</span>
                     </h3>
-                    <div class="content">
+                    <div class="content" id="blogContent">
                         <p class="write__content--textarea" date-scroll="native">
                             <span class="defaultText">Tell your story…</span>
                         </p>
@@ -75,7 +72,7 @@
                 <!-- writeBtn -->
                 <div id="writeBottom">
                     <label>subject :
-                        <select name="tag" class="tag">
+                        <select name="tag" class="tag" id="blogTag">
                             <option value="front">Front-end</option>
                             <option value="back">Back-end</option>
                             <option value="marketing">Marketing</option>
@@ -84,11 +81,10 @@
                     </label>
 
                     <label> name :
-                        <input v-model="author" type="text" class="write__author--input" maxlength="5"
+                        <input id="blogName" type="text" class="write__author--input" maxlength="5"
                             autocomplete /></label><br />
                     <label>password :
-                        <input v-model="password" type="password" class="write__password--input" maxlength="10"
-                            autocomplete />
+                        <input id="blogPw" type="password" class="write__password--input" maxlength="10" autocomplete />
                     </label>
 
                 </div>
