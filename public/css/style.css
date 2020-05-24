@@ -182,7 +182,7 @@ p{
 
 /* Home */
 #Home{
-    background: url('public/imgs/green.png') center/cover no-repeat ;
+    background: url('/public/imgs/green.png') center/cover no-repeat ;
     padding: 40px;
     padding-top: 150px;
     text-align: center;
