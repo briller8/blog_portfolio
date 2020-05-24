@@ -97,7 +97,7 @@
 
             if (imgPath.status === "success") {
                 console.log(imgPath)
-                blogContentDom.innerHTML += `<img src="${API_HOST}/${imgPath.data}" alt="${imgPath.data} style="wdith: 78%">`
+                blogContentDom.innerHTML += `<img src="${API_HOST}/${imgPath.data}" alt="${imgPath.data}" style="width: 78%">`
             }
         })
 
