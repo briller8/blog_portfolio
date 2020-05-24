@@ -52,20 +52,26 @@
     <main id="main">
         <section id="blog">
             <form id="blogForm" v-on:submit.prevent="onSubmit">
-                <h3 class="write__title">
-                    <input v-model="title" type="text" class="write__title--input" maxlength="20" autocomplete
-                        placeholder="제목을 입력하세요" />
-                </h3>
-                <div class="content">
-                    <textarea v-model="write__content" rows="10" class="write__content--textarea"
-                        placeholder="내용을 입력하세요" date-scroll="native"></textarea>
-                </div>
                 <!-- addBtn -->
-                <ul id="add__btn">
-                    <li><button class="add__plus-btn"><i class="far fa-times-circle"></i></button></li>
-                    <li><button class="add__img-btn"><i class="far fa-image"></i></li>
-                    <li><button class="add__code-btn"><i class="fas fa-code"></i></button></li>
+                <ul id="add__btn" contentEditable="fasle">
+                    <li><button class="add__plus-btn"><i class="far fa-times-circle"></i></button>
+                        <ul>
+                            <li><button class="add__img-btn"><i class="far fa-image"></i></li>
+                            <li><button class="add__code-btn"><i class="fas fa-code"></i></button></li>
+                        </ul>
+                    </li>
                 </ul>
+                <div class="blogtext" contentEditable="true">
+                    <h3 class="write__title">
+                        <span class="defaultText">Title</span>
+                    </h3>
+                    <div class="content">
+                        <p class="write__content--textarea" date-scroll="native">
+                            <span class="defaultText">Tell your story…</span>
+                        </p>
+                    </div>
+                </div>
+
                 <!-- writeBtn -->
                 <div id="writeBottom">
                     <label>subject :
@@ -90,6 +96,7 @@
                     publish
                 </button>
             </form>
+
             <!-- <section id="post">
                 <div v-if="posts.length">
                     <ul class="post__list">
@@ -113,6 +120,7 @@
                 <div v-else>
                     포스트가 없습니다.
                 </div>-->
+
         </section>
     </main>
 </body>

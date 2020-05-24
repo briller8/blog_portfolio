@@ -53,7 +53,7 @@
                         <tr>
                             <td class="read__title" colspan="4">{{getSubject()}}</td>
                         </tr>
-                        <tr>
+                        <tr class="read__detail">
                             <td>작성자</td>
                             <td>{{getWriter()}}</td>
                             <td>작성일</td>
@@ -62,7 +62,7 @@
                         <tr class="read__content">
                             <td colspan="4">{{content}}}</td>
                         </tr>
-                        <tr>
+                        <tr class="read__btn">
                             <td colspan="4">
                                 <input type="button" value="수정하기" onclick="location.href='update.jsp?num=<%=num %>'" />
                                 <input type="button" value="삭제하기" onclick="location.href='delete.jsp?num=<%=num %>'" />
