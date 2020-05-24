@@ -63,7 +63,7 @@
 
         if (result.status === "success") {
             alert("게시글이 수정되었습니다.")
-            window.location = "/blog.html"
+            window.location = "blog.html"
         } else {
             console.log(result);
             return alert("게시글 수정에 실패했습니다. 다시 확인해주세요.")
