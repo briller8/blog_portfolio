@@ -53,7 +53,7 @@
         const result = await createPost({ blogData });
 
         if (result.status === "success") {
-            window.location = "/blog.html"
+            window.location = "blog.html"
         } else {
             console.log(result);
             return alert("게시글 등록에 실패했습니다. 다시 확인해주세요.")
