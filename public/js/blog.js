@@ -75,7 +75,7 @@
         return `
         <li >
             <div class="card" >
-                <img src="/public/imgs/green.png" alt="그린" class="card__img">
+                <img src="public/imgs/green.png" alt="그린" class="card__img">
                 <div class="card__content">
                     <div class="card__text__title">${title}</div>
                     <div class="card__text__content">${content}</div>
