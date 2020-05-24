@@ -4,20 +4,88 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MVlog:update</title>
+    <title>SH_Portfolio_Blog</title>
     <meta name="description" content="Portfolio for world-renowned sorfware engineer Seohyeon" />
     <meta name="author" content="Seohyeon Kim">
-    <link rel="icon" type="img/png" href="imgs/favicon.png">
+    <link rel="icon" type="img/png" href="public/imgs/favicon.png">
     <script src="https://kit.fontawesome.com/4b6867fcba.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="public/css/read.css">
+    <script src="public/js/read.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <!-- font-family: 'Noto Sans KR', sans-serif; -->
     </script>
 </head>
 
 <body>
-
+    <!-- NavBar -->
+    <nav id="navbar">
+        <div class="navbar__container">
+            <div class="navbar__menu">
+                <a href="/">
+                    <img src="public/imgs/blog_logo.png" alt="로고" class="navbar__logo">
+                </a>
+            </div>
+            <div class="navbar__menu">
+                <ul class="navbar__menu--list">
+                    <li data-link="#goToBlog" class="navbar__menu__item active"> <a href="blog.html">Blog</a></li>
+                    <li>
+                        <a href="write.html">
+                            <button id="writeBtn" class="navbar__write-btn">write</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Toggle button
+        <button id="toggleBtn" class="navbar__toggle-btn">
+            <i class="fas fa-hamburger"></i>
+        </button> -->
+        </div>
+    </nav>
+    <!-- read-->
+    <main id="main">
+        <section id="read__box">
+            <section id="read">
+                <div id="read__container">
+                    <table class="readContent">
+                        <tr class="read__tag">
+                            <td colspan="4">{{gettag()}}</td>
+                        </tr>
+                        <tr>
+                            <td class="read__title" colspan="4">{{getSubject()}}</td>
+                        </tr>
+                        <tr>
+                            <td>작성자</td>
+                            <td>{{getWriter()}}</td>
+                            <td>작성일</td>
+                            <td>{{getRegDate()}}</td>
+                        </tr>
+                        <tr class="read__content">
+                            <td colspan="4">{{content}}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <input type="button" value="수정하기" onclick="location.href='update.jsp?num=<%=num %>'" />
+                                <input type="button" value="삭제하기" onclick="location.href='delete.jsp?num=<%=num %>'" />
+                                <input type="button" value="목록보기" onclick="location.href='list.jsp'" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <!-- 본문의 H 태그를 수집한다. -->
+            <section id="list" class="list">
+                <div class="index__container">
+                    <ul class="index__content">
+                        <li data-filter="*" class="category__index active">All</li>
+                        <li data-filter="Front" class="category__index">Front-end</li>
+                        <li data-filter="Back" class="category__index">Back-end</li>
+                        <li data-filter="Marketing" class="category__index">Marketing</li>
+                        <li data-filter="Thought" class="category__index">Thought</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+    </main>
 </body>
 
 </html>
