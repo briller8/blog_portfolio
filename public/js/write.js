@@ -56,7 +56,7 @@
             window.location = "/blog.html"
         } else {
             console.log(result);
-            return alert("게시글 등록에 실패했습니다. 다시 시도 해주세요.")
+            return alert("게시글 등록에 실패했습니다. 다시 확인해주세요.")
         }
     };
 
@@ -77,11 +77,11 @@
             const formData = new FormData();
             formData.append("file", e.target.files[0])
 
-            const iamgePath = await imgUpload({ formData });
+            const imagePath = await imgUpload({ formData });
 
-            if (iamgePath.status === "success") {
-                console.log(iamgePath)
-                blogContentDom.innerHTML += `<img src="${API_HOST}/${iamgePath.data}" alt="${iamgePath.data}" style="width: 78%">`
+            if (imagePath.status === "success") {
+                console.log(imagePath)
+                blogContentDom.innerHTML += `<img src="${API_HOST}/${imagePath.data}" alt="${imagePath.data}" style="width: 78%">`
             }
 
         })
