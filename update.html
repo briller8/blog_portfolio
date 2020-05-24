@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SH_Portfolio_Blog</title>
+    <meta name="description" content="Portfolio for world-renowned sorfware engineer Seohyeon" />
+    <meta name="author" content="Seohyeon Kim">
+    <link rel="icon" type="img/png" href="public/imgs/favicon.png">
+    <script src="https://kit.fontawesome.com/4b6867fcba.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="public/css/update.css">
+    <script src="/public/js/update.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- font-family: 'Noto Sans KR', sans-serif; -->
+    </script>
+</head>
+
+
+
+<body>
+    <!-- NavBar -->
+    <nav id="navbar">
+        <div class="navbar__container">
+            <div class="navbar__menu">
+                <a href="/">
+                    <img src="public/imgs/blog_logo.png" alt="로고" class="navbar__logo">
+                </a>
+            </div>
+            <div class="navbar__menu">
+                <ul class="navbar__menu--list">
+                    <li data-link="#goToBlog" class="navbar__menu__item active"> <a href="blog.html">Blog</a></li>
+                    <li>
+                        <!-- publish버튼 -->
+                        <a href="write.html">
+                            <button id="writeBtn" class="navbar__write-btn">Reset</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Toggle button
+        <button id="toggleBtn" class="navbar__toggle-btn">
+            <i class="fas fa-hamburger"></i>
+        </button> -->
+        </div>
+    </nav>
+    <!-- Write -->
+    <main id="main">
+        <section id="blog">
+            <form id="blogForm">
+                <!-- addBtn -->
+                <input type="file" hidden id="file" />
+                <ul id="add__btn" contentEditable="fasle">
+                    <li><button class="add__plus-btn"><i class="far fa-times-circle"></i></button>
+                        <ul>
+                            <li><button class="add__img-btn" id="fileBtn"><i class="far fa-image"></i></li>
+                            <li><button class="add__code-btn"><i class="fas fa-code"></i></button></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="blogtext" contentEditable="true">
+                    <h3 class="update__title" id="blogTitle">
+                    </h3>
+                    <div class="content" id="blogContent">
+                        <!-- <p class="update__content--textarea" date-scroll="native">
+                        </p> -->
+                    </div>
+                </div>
+
+                <!-- updateBtn -->
+                <div id="updateBottom">
+                    <label>subject :
+                        <select name="tag" class="tag" id="blogTag">
+                            <option value="front">Front-end</option>
+                            <option value="back">Back-end</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="thought">Thought</option>
+                        </select>
+                    </label>
+
+                    <label> name :
+                        <input id="blogName" type="text" class="update__author--input" maxlength="5"
+                            disabled /></label><br />
+                    <label>password :
+                        <input id="blogPw" type="password" class="update__password--input" maxlength="10"
+                            autocomplete />
+                    </label>
+
+                </div>
+                <div class="edit">
+                    <button type="submit" class="update__update__btn">
+                        Update
+                    </button>
+                    <button type="submit" class="update__delete__btn" id="delete">
+                        Delete
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
