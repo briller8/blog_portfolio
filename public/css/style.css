@@ -473,6 +473,7 @@ p{
 }
 
 .testimonial__speech-bubble{
+    width: 100%;
     color: var(--color-dark-black);
 }
 .name{
