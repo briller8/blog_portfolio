@@ -229,7 +229,6 @@ p{
 /* blog */
 #main{
     width: 1080px;
-    /* display: flex; */
     justify-content: center;
     padding-top: 80px;
     margin: auto;
@@ -264,14 +263,18 @@ p{
     border-bottom: 2px solid rgba(0, 0, 0, 0.1) ;
     padding-bottom: 10px;
 }
+.blogtext{
+    height: 450px;
+    margin-bottom: 15px;
+
+}
 .content{
-    height: 420px;
+    height: 360px;
     overflow: auto;
     margin-bottom: 10px;
 }
 .write__content--textarea{
     width: 100%;
-    height: auto;
     font-size: var(--font-regular);
     background-color: var(--color-white);
     border: none;
@@ -374,4 +377,144 @@ p{
     background-color: var(--color-orange);
     color: var(--color-white);
     border-radius: 29px;
+}
+
+
+/* ///////////////////////////// */
+/* For below 1024px screen width */
+/* ///////////////////////////// */
+
+
+@media(max-width : 1024px){
+:root{
+
+/* Font size */
+
+--font-large: 40px;
+--font-medium: 26px;
+--font-regular: 18px;
+--font-small: 16px;
+--font-micro: 14px;
+}
+ 
+
+#main{
+    width: 820px;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    /* margin: 0 60px; */
+    
+}
+
+#blog{
+    width: 100%;
+}
+
+#blogForm{
+    widows: 75%;;
+}
+
+.blogtext{
+    height: 880px;
+    margin-bottom: 15px;
+
+}
+.content{
+    height: 420px;
+    margin-bottom: 30px;
+}
+#writeBottom{
+    margin-top: 20px;
+}
+
+.write__publish__btn{
+    margin: 30px;
+}
+
+
+}    
+    
+/* ///////////////////////////// */
+/* For below 768px screen width */
+/* ///////////////////////////// */
+
+
+@media(max-width : 768px){
+:root {
+/* Font size */
+
+--font-large: 29px;
+--font-medium: 20px;
+--font-regular: 15px;
+--font-small: 14px;
+--font-micro: 12px;
+}
+ 
+
+
+#main{
+    width: 400px;
+}
+
+#blog{
+    width: 90%;
+}
+
+#blogForm{
+    width: 88%;
+}
+
+.blogtext{
+    height: 400px;
+    margin-bottom: 15px;
+
+}
+.content{
+    height: 290px;
+    margin-bottom: 30px;
+}
+#writeBottom{
+    margin-top: 10px;
+}
+
+.write__publish__btn{
+    margin: 15px;
+}
+
+/* addBtn */
+/* Add Btn */
+
+#add__btn{
+    top: 67px;
+    left: -38px;
+}
+
+
+#writeBottom{
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 15px;
+}
+
+.write__author--input{
+    margin: 6px;
+    height: 20px;
+}
+.write__password--input{
+    height: 20px;
+    margin: 0px;
+}
+
+.write__publish__btn{
+    margin: 15px;
+}
+
+.write__publish__btn{
+    margin: 15px 0px;
+    width: 88%;
+    height: 29px;
+}
+
+
 }

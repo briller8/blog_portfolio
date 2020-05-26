@@ -266,8 +266,6 @@ p{
 
 /* Card */
 
-#content{
-}
 .content__container{
     background-color: var(--color-white);
     padding-right: 10px;
@@ -426,3 +424,127 @@ p{
     padding-bottom: 8px;
 }
 
+
+/* ///////////////////////////// */
+/* For below 1024px screen width */
+/* ///////////////////////////// */
+
+
+@media(max-width : 1024px){
+:root{
+    
+/* Font size */
+
+--font-large: 40px;
+--font-medium: 26px;
+--font-regular: 18px;
+--font-small: 16px;
+--font-micro: 14px;
+}
+
+#main{
+    width: 1024px;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    margin: 0 60px;
+    
+}
+/* Content */
+
+#content{
+    width: 75%;
+}
+.content__container ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin: 0 50px; */
+}
+.card{
+    position:relative;
+    background-color:var(--color-white);
+    width: 310px;
+    height: 290px;
+    border-radius: var(--size-border-radius);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 12px;
+    margin: 20px 29px;
+}
+
+/* list */
+#list{
+    width: 25%;
+}
+
+
+
+
+/* ///////////////////////////// */
+/* For below 768px screen width */
+/* ///////////////////////////// */
+
+
+@media(max-width : 768px){
+:root {
+    /* Font size */
+    
+    --font-large: 29px;
+    --font-medium: 20px;
+    --font-regular: 15px;
+    --font-small: 14px;
+    --font-micro: 12px;
+}
+
+#main{
+    width: 375px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+}
+/* Content */
+
+#content{
+    width: 75%;
+}
+.content__container ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 360px;
+    padding 0px;
+}
+.card{
+    width: 360px;
+    height: 290px;
+}
+
+.card--wrap{
+    width: 360px;
+    height: 290px;  
+}
+
+#cardList{
+    width: 360px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.card__text__content{
+    display: none;
+}
+
+
+/* list */
+#list{
+    order: -1;
+    width: 25%;
+}
+
+.list__container{
+    width: 129px;
+    margin: 0px;
+    padding: 20px 0px 0px 10px;
+}
+
+}

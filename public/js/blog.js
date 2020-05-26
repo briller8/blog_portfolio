@@ -143,7 +143,7 @@
         return `
             <div class="detail__container">
                 <span><i class="fas fa-times" id="detailClose"></i></span>
-                <div class="detail__title">Title : ${cardInfo.title}</div>
+                <div class="detail__title"> ${cardInfo.title}</div>
                 <div class="detail__content">${cardInfo.content}</div>
                 <div class="detail__footer">
                     <a href="update.html?postId=${cardInfo.id}"><button class="detail__footer__edit">수정</button></a>
