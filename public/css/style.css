@@ -249,8 +249,8 @@ p{
     margin: auto;
     color: var(--color-deep-purple);
     border: 1px solid var(--color-deep-purple);
-    border-radius: 29%;
-    margin-bottom: 16px;
+    border-radius: 49%;
+    /* margin-bottom: 16px; */
 }
 
 .major__icon i{
@@ -269,6 +269,10 @@ p{
     display: flex;
     align-items: center;
 }
+
+.job__logo{
+    width: 149px;
+}
 .job__description{
     margin: 0 16px;
     text-align: left;
@@ -280,7 +284,7 @@ p{
 /* Skill */
 #skills{
     background-color: var(--color-bright-green); 
-    margin: 16px;
+    /* margin: 16px; */
 }
 
 .skillset{
@@ -297,11 +301,11 @@ p{
 .skillset__left{
     flex-basis: 60%;
     background-color: var(--color-dark-grey);
-    padding: 20px;
+    padding: 20px 40px;
 }
 
 .skill{
-    margin-bottom: 8px;
+    margin-bottom: 32px;
 }
 .skills__discription{
     display: flex;
@@ -331,10 +335,6 @@ p{
 }
 
 /* Work */
-
-/* .work.section{
-    background-color: var(--color-dark-white);    
-} */
 
 .work__categories{
     margin: 40px;
@@ -387,7 +387,7 @@ p{
     justify-content: center;
     align-items: center;
     width: 280px;
-    height: 250px;
+    height: 190px;
     margin: 2px;
     background-color: var(--color-yellow);
 }
@@ -399,6 +399,7 @@ p{
 .project__img{
     max-width: 100%;
     max-height: 100%;
+    
 }
 
 .project__description{
@@ -454,7 +455,6 @@ p{
 
 .testimonial{
     display: flex;
-    margin: 32px 0;
 }
 .testimonial__speech-bubble{
     text-emphasis: height; 
@@ -467,7 +467,7 @@ p{
     margin-right: 40px;
 }
 .testimonial__avatar:nth-child(even){
-    margin-right: 40px;
+    margin-left: 40px;
 }
 
 .testimonial__avatar{
@@ -478,6 +478,10 @@ p{
 }
 
 .testimonial__speech-bubble{
+    color: var(--color-dark-black);
+}
+.name{
+    font-size: var(--font-micro);
     color : var(--color-dark-purple);
 }
 
@@ -529,4 +533,283 @@ p{
 .arrow-up.visible{
     opacity: 1;
     pointer-events: auto;
+}
+
+/* ///////////////////////////// */
+/* For below 1024px screen width */
+/* ///////////////////////////// */
+
+@media(max-width : 1024px){
+:root{
+    
+/* Font size */
+
+--font-large: 40px;
+--font-medium: 26px;
+--font-regular: 18px;
+--font-small: 16px;
+--font-micro: 14px;
+}    
+
+/* navbar */
+.navbar__toggle-btn {
+    display: block;
+}
+#navbar {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.navbar__menul {
+    width: 100%;
+}
+.navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+}
+
+.navbar__menu.open {
+    display: block;
+}
+
+/* section */
+.section {
+    padding: 16px;
+    padding-top: 40px;
+}
+
+/* major */
+.about__majors {
+    /* flex-direction: column; */
+    /* 배치는 모바일에서 조정, 태블릿은 마진 조정 */
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+.major {
+    margin-bottom: 30px;
+}
+
+/* skillset */
+.skillset {
+    flex-direction: column;
+}
+
+/* work */
+
+.category__count{
+    background-color: var(--color-deep-purple);
+    border-radius: 34%;
+    color: var(--color-white);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    margin: 3px;
+    opacity: 1;
+}
+
+/* myWork */
+.section__container{
+    margin: 10px 20px 40px 20px;
+}
+
+.work__categories{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    
+}
+
+.category__btn {
+    margin: 8px 0;
+    width: 290px;
+}
+.project {
+    height: max-content;
+}
+
+.project__description{
+    background-color: var(--color-dark-black);
+    opacity: 0.8;
+}
+
+
+/* skill */
+
+.skillset__right{
+    display: flex;
+}
+
+.tools{
+    background-color: var(--color-grey);
+}
+
+.tools, .etc{
+    width: 50%;
+    padding: 20px;
+}
+
+/* testimonals */
+
+.testimonial {
+    align-items: center;
+    margin: auto;
+}
+
+.testimonial__avatar {
+    width: 120px;
+    height: 120px;
+}
+
+.testimonial__avatar:nth-child(odd){
+    margin-right: 18px;
+}
+.testimonial__avatar:nth-child(even){
+    margin-left: 18px;
+}
+.testimonial__speech-bubble{
+    width: 100%;
+    margin: 8px 20px;
+}
+
+}
+
+/* ///////////////////////////// */
+/* For below 768px screen width */
+/* ///////////////////////////// */
+
+@media(max-width : 768px){
+:root {
+/* Font size */
+
+--font-large: 29px;
+--font-medium: 20px;
+--font-regular: 15px;
+--font-small: 14px;
+--font-micro: 12px;
+}
+/* navbar */
+.navbar__toggle-btn {
+    display: block;
+}
+
+/* home */
+.home__avatar{
+    width: 188px;
+    height: 188px;
+    border-radius: 34%;
+    border:  2px solid 1px;
+    box-shadow: 3px 4px 5px var(--color-grey);
+}
+/* aboutMe */
+.major__icon{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.job{
+    display: flex;
+    align-items: center;
+}
+.job__description{
+    margin: 0 16px;
+    text-align: left;
+}
+.job__logo{
+    width: 120px;
+}
+.job__name, .job__period{
+    font-size: var(--font-micro);
+}
+
+/* major */
+.about__majors {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+.major {
+    margin-bottom: 30px;
+}
+
+/* skill */
+.section__container{
+    align-items: center;
+}
+
+.skillset{
+    margin: 0;
+}
+
+/* work */
+
+.work__categories{
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+}
+
+.project__description{
+    background-color: var(--color-dark-black);
+    opacity: 0.8;
+}
+/* skill */
+
+.skillset__right{
+    display: block;
+}
+
+.tools{
+    background-color: var(--color-grey);
+}
+
+.tools, .etc{
+    width: 100%;
+    padding: 20px;
+}
+
+/* testimonals */
+.testimonial {
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial__avatar {
+    width: 120px;
+    height: 120px;
+}
+.testimonial__avatar:nth-child(odd),
+.testimonial__avatar:nth-child(even) {
+    margin-bottom: 5px ;
+}
+.testimonial__speech-bubble{
+    width: 100%;
+    margin: 8px 20px;
+    order: 1;
+}
+}
+
+
+/* change btn */
+#changeBtn {
+    color: var(--color-white);
+}
+#changeBtn:hover {
+	cursor: pointer;
+	color: var(--color-dark-white);
+}
+
+@media(max-width : 1023px){
+}
+
+@media(max-width : 767px){
+
 }
