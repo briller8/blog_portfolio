@@ -55,7 +55,7 @@ function scrollIntoView(selector) {
 
 
 const arrowUp = document.querySelector('.arrow-up');
-console.log(arrowUp);
+// console.log(arrowUp);
 document.addEventListener('scroll', () => {
     if (window.scrollY > homeHeight / 2) {
         arrowUp.classList.add('visible');

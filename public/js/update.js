@@ -10,6 +10,7 @@
     const blogForm = document.querySelector("#blogForm");
     const blogContentDom = document.querySelector("#blogContent");
 
+    // https://hamait.tistory.com/342 정규표현식 참고
     const postId = window.location.search.match(/(postId=\d+)/g)[0].split("=")[1];
 
 
@@ -30,7 +31,7 @@
 
 
 
-
+    //업데이트 버튼을 누르면 실행되는 함수
     const onUpdate = async (event) => {
         event.preventDefault();
 
@@ -68,25 +69,14 @@
             console.log(result);
             return alert("게시글 수정에 실패했습니다. 다시 확인해주세요.")
         }
-
-
-
-
-
-        fileBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            file.click();
-        })
-
-
-        console.dir(document.querySelector("#"))
     }
 
     ////////////////////
     //    add event   //
     ////////////////////
 
+
+    // 이미지 파일 추가 이벤트
     if (fileBtn) {
         const file = document.querySelector("#file");
         file.addEventListener("change", async (e) => {
@@ -109,7 +99,7 @@
         })
     }
 
-
+    // 업데이트 버튼 클릭 이벤트
     if (blogForm) {
         blogForm.addEventListener("submit", onUpdate);
     }

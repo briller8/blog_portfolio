@@ -2,7 +2,7 @@
 
 
 
-// iife 패턴을 사용한다. closer로 전역이 오염되지 않는다.
+// iife 패턴을 사용한다. closure로 전역이 오염되지 않는다.
 (function () {
     'use strict'
     const API_HOST = "https://blog.geoniljang.com";
@@ -16,11 +16,11 @@
     //span
     const defaultText = document.querySelectorAll(".defaultText");
 
-
+    // publish를 누르면 실행되는 함수 
     const onCreate = async (event) => {
         event.preventDefault();
 
-        console.dir(document.querySelector("#blogTag"));
+        // console.dir(document.querySelector("#blogTag"));
         const blogTag = document.querySelector("#blogTag").value;
         const blogName = document.querySelector("#blogName").value;
         const blogPw = document.querySelector("#blogPw").value;
@@ -60,17 +60,13 @@
         }
     };
 
-    const _removeSpan = (e) => {
-        e.stopPropagation();
-        e.target.remove();
-    }
-
     //form
     if (blogForm) {
         blogForm.addEventListener("submit", onCreate);
     }
 
-    //file
+
+    //file 이미지 업로드 함수
     if (fileBtn) {
         const file = document.querySelector("#file");
         file.addEventListener("change", async (e) => {
@@ -80,7 +76,7 @@
             const imagePath = await imgUpload({ formData });
 
             if (imagePath.status === "success") {
-                console.log(imagePath)
+                // console.log(imagePath)
                 blogContentDom.innerHTML += `<img src="${API_HOST}/${imagePath.data}" alt="${imagePath.data}" style="width: 78%">`
             }
 
@@ -97,12 +93,16 @@
 
 
     //editable span 태그를 제거하기 위해서 클릭 이벤트를 설정하기 위해서 
+    const _removeSpan = (e) => {
+        e.stopPropagation();
+        e.target.remove();
+    }
+
     if (defaultText) {
         Array.from(defaultText).forEach(sp => {
             sp.addEventListener("click", _removeSpan)
         })
     }
-
 
 
 

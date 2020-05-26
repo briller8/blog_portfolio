@@ -2,7 +2,7 @@
 
 
 
-// iife 패턴을 사용한다. closer로 전역이 오염되지 않는다.
+// iife 패턴을 사용한다. closure로 전역이 오염되지 않는다.
 (function () {
     'use strict'
     const API_HOST = "https://blog.geoniljang.com";
@@ -35,10 +35,13 @@
             e.stopPropagation()
             const cardId = e.target.dataset.cardid;
             if (cardId) {
+                //event handler_확인
                 onSetCardInfo({ cardId })
             }
         })
     }
+
+    //card close 이벤트
     if (detail) {
         detail.addEventListener("click", (e) => {
             const id = e.target.id;
@@ -48,6 +51,7 @@
         })
     }
 
+    //contents category filter 
     if (categoryList) {
         categoryList.addEventListener("click", (e) => {
             e.stopPropagation();
@@ -85,6 +89,7 @@
     ////////////////////
 
 
+    //modal에 들어갈 블로그 데이터 불러오기. 
     const onSetCardInfo = async ({ cardId }) => {
         const result = await getBlog({ id: cardId });
         if (result.status === "success") {
@@ -111,6 +116,7 @@
     ////////////////////
 
 
+    //카드를 만드는 함수.
     const makeCard = ({ img, title, content, id, tag }) => {
 
         let imagePath = ""
@@ -141,6 +147,7 @@
         `
     };
 
+    //내용 확인을 위한 modal를 만드는 함수.
     const makeModal = ({ cardInfo }) => {
         console.log(cardInfo)
         return `

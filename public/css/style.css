@@ -126,16 +126,16 @@ p{
 }
 
 .navbar__logo {
-    height: 79px;
     display: block;
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
 }
 
 .navbar__logo--img{
+    /* justify-content: center;
+    align-content: center; */
     width: 139px;
-    justify-content: center;
-    align-content: center;
+    /* display: flex; */
 }
 
 
@@ -384,7 +384,7 @@ p{
     width: 280px;
     height: 190px;
     margin: 2px;
-    background-color: var(--color-yellow);
+    background-color: var(--color-dark-white);
 }
 
 .project.invisible{
@@ -452,7 +452,10 @@ p{
     display: flex;
 }
 .testimonial__speech-bubble{
-    text-emphasis: height; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
     background-color: var(--color-white);
     border-radius: var(--size-border-radius);
@@ -560,8 +563,8 @@ p{
 
 .navbar__logo{
     width: 100%;
-    height: 40px;
-    margin: 5px 0px 0px 20px;
+    padding-top: 8px ;
+    margin-left: 50px;
 }
 
 .navbar__toggle-btn {
@@ -812,15 +815,5 @@ p{
     margin: 8px 20px;
     order: 1;
 }
-}
-
-
-/* change btn */
-#changeBtn {
-    color: var(--color-white);
-}
-#changeBtn:hover {
-	cursor: pointer;
-	color: var(--color-dark-white);
 }
 
