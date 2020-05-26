@@ -3,23 +3,23 @@
 ## 요약
 
 1. 기술 스택 : HTML, CSS, Vanilla JS
-- CSS: BEM (Block Element Modifier)
-       컴포넌트 단위로 구조화 해 CSS를 구성함.
-       http://getbem.com/introduction/
-- JS : Iife 패턴 (Immediately-Invoked Function Expressions)
-      정의되자마자 사용되는 함수
-      변수나 메소드가 외부로부터 접근되는 것을 허용하지 않아 closure가 보호하도록 만들 수 있다
+- CSS: BEM (Block Element Modifier) <br>
+       컴포넌트 단위로 구조화 해 CSS를 구성함. <br>
+       http://getbem.com/introduction/<br>
+- JS : IIFE 패턴 (Immediately-Invoked Function Expressions)<br>
+      정의되자마자 사용되는 함수<br>
+      변수나 메소드가 외부로부터 접근되는 것을 허용하지 않아 closure가 보호하도록 만들 수 있다.<br>
 
-2. 서버 : nodejs, Sequelize 사용 (백엔드 개발자 작업)
-         restAPI통신 
+2. 서버 : nodejs, Sequelize 사용 (백엔드 개발자 작업)<br>
+         REST API통신 <br>
          
 3. 페이지 구성 : profile(aboutMe)와 blog(go to blog)로 구성
+
 - aboutMe : 마케터+개발자로 프론트엔드와 관련있는 경력만 간략히 서술함
 - go to blog : 블로그 프로젝트 
   카드형식의 리스트는 Modal로 구성되어 있음. 게시물의 자세한 내용을 클릭해서 확인할 수 있음.
   
 4. 반응형 홈페이지 : 데스크톱 우선 방식으로 1024px, 768px을 기준으로 @media쿼리 사용
-  - 태블릿부터 마우스hover 이벤트를 사용하지 못할 가능성이 높아 transition을 제외한 화면 노출
   
 
 ## 아쉬운 점
