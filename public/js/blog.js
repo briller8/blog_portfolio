@@ -27,6 +27,9 @@
     ////////////////////
     //    add event   //
     ////////////////////
+
+
+
     if (cardList) {
         cardList.addEventListener("click", async (e) => {
             e.stopPropagation()
@@ -72,8 +75,6 @@
                     }
                 }
             });
-
-
         })
     }
 
@@ -108,6 +109,8 @@
     ////////////////////
     //     custom     //
     ////////////////////
+
+
     const makeCard = ({ img, title, content, id, tag }) => {
 
         let imagePath = ""

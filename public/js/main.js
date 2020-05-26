@@ -26,6 +26,16 @@ navbarMenu.addEventListener('click', (event) => {
 });
 
 
+//Navbar toggle Btn
+
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open')
+    navbar.classList.toggle('open')
+});
+
+
+
 //transparent as window scroll down
 
 const home = document.querySelector(".home__container");
@@ -71,13 +81,8 @@ workBtnContainer.addEventListener('click', (e) => {
     }
 
     projects.forEach((project) => {
-        console.log(filter);
-        console.log(filter === "All");
-        // console.log(project.dataset.type);
-        if (filter === "All") {
-            project.classList.remove('invisible');
-        }
-        if (filter === project.dataset.type) {
+
+        if (filter === project.dataset.type || filter === "All") {
             project.classList.remove('invisible');
         } else {
             project.classList.add('invisible');
@@ -85,8 +90,6 @@ workBtnContainer.addEventListener('click', (e) => {
     });
 });
 
-
-///Navbar toggle Btn
 
 
 

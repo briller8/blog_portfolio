@@ -105,7 +105,7 @@ p{
 }
 
 .navbar__container{
-    width: 1080px;
+    width: 73%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -126,15 +126,19 @@ p{
     align-items: center;
 }
 
-#navbar.navbar__logo{
-    height: 79px;
-}
-
 .navbar__logo {
+    height: 79px;
     display: block;
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
 }
+
+.navbar__logo--img{
+    width: 139px;
+    justify-content: center;
+    align-content: center;
+}
+
 
 .navbar__menu__item> a{
     color: var(--color-dark-purple);
@@ -176,11 +180,6 @@ p{
     font-weight: var(--font-large);
 }
 
-.navbar__menu img{
-    width: 139px;
-    justify-content: center;
-    align-content: center;
-}
 /* WriteBtn*/
 #writeBtn{
     width: 62px;
@@ -426,6 +425,23 @@ p{
 
 
 /* ///////////////////////////// */
+/* For below 1080px screen width */
+/* ///////////////////////////// */
+
+
+@media(min-width : 1080px){
+
+/* Navbar */
+
+.navbar__container{
+    width: 1080px;
+}
+
+}
+
+
+
+/* ///////////////////////////// */
 /* For below 1024px screen width */
 /* ///////////////////////////// */
 
@@ -450,6 +466,12 @@ p{
     margin: 0 60px;
     
 }
+/* Navbar */
+
+.navbar__container{
+    width: 80%;
+}
+
 /* Content */
 
 #content{
@@ -476,7 +498,7 @@ p{
     width: 25%;
 }
 
-
+}
 
 
 /* ///////////////////////////// */
@@ -502,6 +524,14 @@ p{
     justify-content: center;
     margin: 0 20px;
 }
+
+/* Navbar */
+
+.navbar__container{
+    width: 92%;
+    padding: 0 10px;
+}
+
 /* Content */
 
 #content{
@@ -512,7 +542,7 @@ p{
     flex-wrap: wrap;
     justify-content: center;
     width: 360px;
-    padding 0px;
+    padding: 0px;
 }
 .card{
     width: 360px;

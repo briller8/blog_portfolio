@@ -95,15 +95,17 @@ p{
     margin: 4px 0px;
 }
 
+
 /* Navbar */
 #navbar{
     position: fixed;
+    z-index: 1000;
     width: 100%;
+    background-color: var(--color-white);
     box-shadow: rgba(0, 0.1, 0.1, 0.049) 0px 5px 12px;
 }
-
 .navbar__container{
-    width: 1080px;
+    width: 73%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -113,7 +115,7 @@ p{
     padding: 3px;
 }
 #navbar.navbar--dark{
-    background-color: var(--color-light-white);
+    background-color: var(--color-white);
     padding: 3px;
 }
 
@@ -124,15 +126,19 @@ p{
     align-items: center;
 }
 
-#navbar.navbar__logo{
-    height: 79px;
-}
-
 .navbar__logo {
+    height: 79px;
     display: block;
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
 }
+
+.navbar__logo--img{
+    width: 139px;
+    justify-content: center;
+    align-content: center;
+}
+
 
 .navbar__menu__item> a{
     color: var(--color-dark-purple);
@@ -174,11 +180,7 @@ p{
     font-weight: var(--font-large);
 }
 
-.navbar__menu img{
-    width: 139px;
-    justify-content: center;
-    align-content: center;
-}
+
 /* wirteBtn*/
 #writeBtn{
     width: 62px;
@@ -370,6 +372,21 @@ p{
     transition: all var(--Animation-duration) ease;
 }
 
+
+/* ///////////////////////////// */
+/* For over 1080px screen width */
+/* ///////////////////////////// */
+
+
+@media(min-width : 1080px){
+
+/* Navbar */
+
+.navbar__container{
+    width: 1080px;
+}
+
+}
 
 /* ///////////////////////////// */
 /* For below 1024px screen width */
